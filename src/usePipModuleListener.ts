@@ -29,7 +29,6 @@ export function usePipModeListener(): Boolean {
 
   useEffect(() => {
     let pipListener: EmitterSubscription | undefined;
-
     if (Platform.OS === 'android') {
       pipListener = PipHandler.onPipModeChanged(setIsPipModeEnabled);
     }

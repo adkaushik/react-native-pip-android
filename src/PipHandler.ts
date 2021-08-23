@@ -11,10 +11,7 @@ class PipHandler {
   }
 
   onPipModeChanged(listener: (isModeEnabled: Boolean) => void) {
-    return this?.EventEmitter?.addListener(
-      NativeModules?.PipAndroid.PIP_MODE_CHANGE,
-      listener
-    );
+    return this?.EventEmitter?.addListener('PIP_MODE_CHANGE', listener);
   }
 
   /**

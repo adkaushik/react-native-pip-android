@@ -1,6 +1,7 @@
 package com.reactnativepipandroid;
 
 import android.app.PictureInPictureParams;
+import android.util.Log;
 import android.util.Rational;
 
 import androidx.annotation.NonNull;
@@ -20,13 +21,14 @@ public class PipAndroidModule extends ReactContextBaseJavaModule {
 
     ReactApplicationContext reactApplicationContext;
 
-  static void pipModeChanged(Boolean isInPictureInPictureMode) {
+  public static void pipModeChanged(Boolean isInPictureInPictureMode) {
     eventEmitter.emit(PIP_MODE_CHANGE, isInPictureInPictureMode);
   }
 
   public PipAndroidModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        this.reactApplicationContext = reactApplicationContext;
+    Log.d("PIP", "Got the context");
+        this.reactApplicationContext = reactContext;
   }
 
     @Override

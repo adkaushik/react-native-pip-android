@@ -1,6 +1,10 @@
 package com.example.reactnativepipandroid;
 
+import android.content.res.Configuration;
+
 import com.facebook.react.ReactActivity;
+
+import com.reactnativepipandroid.PipAndroidModule;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +15,10 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "PipAndroidExample";
+  }
+
+  @Override
+  public void onPictureInPictureModeChanged (boolean isInPictureInPictureMode, Configuration newConfig) {
+    PipAndroidModule.pipModeChanged(isInPictureInPictureMode);
   }
 }
