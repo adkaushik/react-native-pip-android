@@ -33,8 +33,11 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "android",
+    "picure-in-picture",
+    "pip",
+    "android pip",
+    "react native picture in picture"
   ],
   "repository": "https://github.com/adkaushik/react-native-pip-android",
   "author": " Kaushik Annangi <adkaushik25@gmail.com> (https://github.com/adkaushik)",
@@ -141,7 +144,7 @@
     "output": "lib",
     "targets": [
       "typescript",
-      "aar"
+      ["aar", { "reverseJetify": true }]
     ]
   }
 }

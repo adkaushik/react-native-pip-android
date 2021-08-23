@@ -20,6 +20,17 @@ yarn add react-native-pip-android
 
 ## Setup
 
+Add the following attrs in `/android/app/src/main/AndroidManifest.xml` file
+
+```xml
+  <activity
+    ...
+      android:supportsPictureInPicture="true"
+      android:configChanges=
+        "screenSize|smallestScreenSize|screenLayout|orientation"
+        ...
+```
+
 If you don't have to recieve updates when the pip mode is entered or exited,
 you are good to go. In order to subscribe to the changes in the pip mode, add the following code to `MainActivity.java`.
 
