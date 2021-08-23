@@ -1,9 +1,5 @@
-import { NativeModules } from 'react-native';
+import PipHandler from './PipHandler';
 
-type PipAndroidType = {
-  multiply(a: number, b: number): Promise<number>;
-};
-
-const { PipAndroid } = NativeModules;
-
-export default PipAndroid as PipAndroidType;
+export default PipHandler;
+export { PipHandler };
+export { default as usePipModeListener } from './usePipModuleListener';

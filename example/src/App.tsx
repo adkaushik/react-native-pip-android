@@ -1,18 +1,27 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import PipAndroid from 'react-native-pip-android';
+import PipHandler, { usePipModeListener } from 'react-native-pip-android';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const inPipMode = usePipModeListener();
 
-  React.useEffect(() => {
-    PipAndroid.multiply(3, 7).then(setResult);
-  }, []);
+  if (inPipMode) {
+    return (
+      <View style={styles.container}>
+        <Text>PIP Mode</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={styles.text}>
+        These text components are hidden in pip mode
+      </Text>
+      <Text onPress={PipHandler.enterPipMode(300, 214)}>
+        Click Enter Pip Mode
+      </Text>
     </View>
   );
 }
@@ -27,5 +36,8 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     marginVertical: 20,
+  },
+  text: {
+    marginBottom: 50,
   },
 });
