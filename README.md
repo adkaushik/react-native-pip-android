@@ -1,9 +1,15 @@
-# react-native-pip-android
+# React Native Android Picture in Picture
 
 Add picture in picture support to react native android application.
 Also has a listener to notify the pip state change.
 
-Note: This package only works on android.
+## Note 
+
+This package only works on android.
+
+## Demo
+
+<a href="https://github.com/adkaushik/react-native-pip-android"><img src="https://user-images.githubusercontent.com/26771716/130575748-d763dc3c-ff73-4727-8019-28eb210c88fd.gif" width="360"></a>
 
 ## Installation
 
