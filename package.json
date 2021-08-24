@@ -1,6 +1,6 @@
 {
   "name": "react-native-pip-android",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add picture in picture support to react native android application",
   "main": "src/index.tsx",
   "module": "lib/module/index",
