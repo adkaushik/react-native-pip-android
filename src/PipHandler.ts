@@ -14,6 +14,10 @@ class PipHandler {
     return this?.EventEmitter?.addListener('PIP_MODE_CHANGE', listener);
   }
 
+  onPipClosed(listener: () => void) {
+    return this?.EventEmitter?.addListener('PIP_CLOSED', listener);
+  }
+
   /**
    * Call this method from any component to enter the pip mode.
    * This method accepts two integers, width and height, which have default values,
