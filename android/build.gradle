@@ -2,11 +2,11 @@ buildscript {
     if (project == rootProject) {
         repositories {
             google()
-            jcenter()
+            mavenCentral()
         }
 
         dependencies {
-            classpath 'com.android.tools.build:gradle:3.5.3'
+            classpath 'com.android.tools.build:gradle:8.2.1'
         }
     }
 }
@@ -18,14 +18,12 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('PipAndroid_compileSdkVersion', 29)
-    buildToolsVersion safeExtGet('PipAndroid_buildToolsVersion', '29.0.2')
+    compileSdkVersion safeExtGet('PipAndroid_compileSdkVersion', 34)
     defaultConfig {
-        minSdkVersion safeExtGet('PipAndroid_minSdkVersion', 16)
-        targetSdkVersion safeExtGet('PipAndroid_targetSdkVersion', 29)
+        minSdkVersion safeExtGet('PipAndroid_minSdkVersion', 21)
+        targetSdkVersion safeExtGet('PipAndroid_targetSdkVersion', 34)
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
@@ -49,7 +47,7 @@ repositories {
         url("$rootDir/../node_modules/react-native/android")
     }
     google()
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
